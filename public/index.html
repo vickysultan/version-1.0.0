@@ -1,16 +1,18 @@
 <DOCTYPE HTML5>
-<html ng-app="my-app">
+<html ng-app="my-app" ng-controller="ParentController">
 	<head>
 		<title>MY-APP</title>
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
 			<script  src ="bower_components/jquery/dist/jquery.js" ></script>
 			<link rel="stylesheet" href ="bower_components/bootstrap/dist/css/bootstrap.css" >
 			<link rel="stylesheet" href ="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-			<script  src ="bower_components/bootstrap/dist/js/bootstrap.js" ></script>
+			<script src ="bower_components/bootstrap/dist/js/bootstrap.js" ></script>
 			<link rel="stylesheet" href="./css/index.css">
+			<link rel="stylesheet" href="./css/navbar.css">
 
 	</head>
 	<body class="container-fluid">
+	<div ng-include = "'./views/navbar.html'"></div>
 		<div ng-view>
 			
 		</div>

@@ -1,0 +1,34 @@
+.navbar-default{
+	background-color: transparent;
+	border: none;
+}
+.location_name{
+	border-radius: 0px;
+	font-weight: bold;
+	padding-left: 3px;
+	cursor: pointer;
+}
+.location_icon{
+	cursor: pointer;
+}
+.select_location{
+	border: 1px solid gray;
+    padding: 2%;
+    position: relative;
+    top: -29px;
+    right: 2%;
+    height: 120px;
+    color: ;
+}
+.triangle{
+   position: absolute;
+    float: right;
+    top: -11px;
+    right: 16px;
+}
+.location_ul{
+	padding-right: 2%;
+}
+.navbar-nav{
+	margin: 15px 8px 0;;
+}

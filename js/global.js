@@ -1,0 +1,1 @@
+var global = angular.module('globalModule',['ngRoute']);
