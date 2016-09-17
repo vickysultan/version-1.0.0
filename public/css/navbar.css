@@ -18,17 +18,42 @@
     top: -29px;
     right: 2%;
     height: 120px;
-    color: ;
+    background-color: #1f2533;
 }
 .triangle{
    position: absolute;
     float: right;
-    top: -11px;
+    top: -10px;
     right: 16px;
+    color: #1f2533;
 }
 .location_ul{
 	padding-right: 2%;
 }
 .navbar-nav{
 	margin: 15px 8px 0;;
+}
+.enterCity{
+	width: 100%;
+	height: 30px;
+	padding: 2px 10px;
+}
+.popular_cities{
+	    margin-top: 20px;
+}
+.popularSearches{
+	color: white;
+	font-weight: bold;
+	font-size: 10px;
+}
+.cityList{
+	position: relative;
+	width: 100%;
+}
+.cityOption{
+	background-color: white;
+	height: 26px;
+    padding: 3px 10px;
+    border-bottom: 0.1px solid lightgray;
+    cursor: pointer;
 }

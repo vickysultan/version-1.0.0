@@ -10,13 +10,18 @@
            <span class="glyphicon glyphicon-screenshot location_icon" aria-hidden="true"></span><span title="Click To Change Location" class="location_name">{{locationOfUser}}<span>
         </li>
       </ul>
-     
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-11 select_location pull-right" ng-show="userWantsToSelectLocation" >
- <span class="glyphicon glyphicon glyphicon-triangle-top triangle" aria-hidden="true"></span>
- <div class="pull-right">
-        dd
-        </div>
-      </div>
+<span class="glyphicon glyphicon glyphicon-triangle-top triangle" aria-hidden="true"></span>
+<form name="cityNameForm" novalidate>
+    <input type="text" name="cityNameInput" ng-model="cityNameInput" autocomplete="off" class="enterCity" placeholder="ENTER YOUR CITY" required>
+    <div class="cityList" ng-if="cityNameForm.cityNameInput.$dirty && cityNameForm.cityNameInput.$valid">
+         <div class="cityOption" ng-repeat="city in cityList | StartsWithFilter: cityNameInput" ng-click="changeLocation(city)">{{city}}</div>
+    </div>
+</form>
+  <div class="popular_cities">
+   <span class="popularSearches">POPULAR SEARCHES</span>
+  </div>
+</div>
