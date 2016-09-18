@@ -11,15 +11,15 @@ angular.module('my-app', [
     	templateUrl: './views/home.html',
     	controller: 'HomeCtrl'
   		});
-}]).controller('ParentController',function($rootScope ,locationService, StartsWithFilterFilter){
+}]).controller('ParentController',function($rootScope ,locationService, StartsWithFilterFilter, $timeout){
 	$rootScope.locationOfUser = "";
-	$rootScope.userWantsToSelectLocation = false;
+	$rootScope.userWantsToSelectLocation = {}
+	$rootScope.userWantsToSelectLocation.value = false;
 	$rootScope.cityList = ["Chennai", "Bangalore", "MUMBAI"]
 	if(localStorage.getItem("location") !== null){
 		$rootScope.locationOfUser = localStorage.getItem("location");
 	}
 	else{
-		console.log("else")
 		locationService.getLocation().then(function(city){
 				$rootScope.locationOfUser = city;
 				localStorage.setItem("location",$rootScope.locationOfUser)
@@ -27,7 +27,8 @@ angular.module('my-app', [
 	}
 
 	$rootScope.changeLocation = function(city){
+		$rootScope.userWantsToSelectLocation.value = false;
 		$rootScope.locationOfUser = city;
-		localStorage.setItem("location", city)
+		localStorage.setItem("location", city);
 	}
 });
