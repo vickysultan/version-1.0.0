@@ -3,6 +3,10 @@
 	border: none;
 	border-radius: 0px;
 }
+.navbar-brand{
+
+    color: white;
+}
 .location_name{
 	border-radius: 0px;
 	font-weight: bold;
@@ -30,6 +34,7 @@
 }
 .location_ul{
 	padding-right: 2%;
+	color: white;
 }
 .navbar-nav{
 	margin: 15px 8px 0;;
