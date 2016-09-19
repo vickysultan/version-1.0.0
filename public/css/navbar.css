@@ -1,6 +1,7 @@
 .navbar-default{
 	background-color: transparent;
 	border: none;
+	border-radius: 0px;
 }
 .location_name{
 	border-radius: 0px;
